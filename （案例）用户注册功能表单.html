@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>可以修改的网页标题</h1>
+    <!-- 分割水平线 hr-->
+    <hr>
+
+    <form>
+        昵称：
+        <!--  placeholder文本输入框提示符 -->
+        <input type="text" placeholder="请输入昵称">
+        <!-- 换行br -->
+        <br><br> 性别：
+        <label>
+      <!-- radio设置单选框，设置name属性才能达到一次只能选一个，不能同时选中   checked设置默认选中-->
+      <input type="radio" name="sex" checked>男
+    </label>
+        <label>
+      <input type="radio" name="sex">女
+    </label>
+        <br><br> 生日：
+        <!-- date可以选择日历中的日期 -->
+        <input type="date">
+
+        <br><br> 所在城市：
+        <!-- <select><option></option></select>可以出现下拉菜单 -->
+        <select>
+      <option>上海</option>
+      <option>北京</option>
+      <option>广州</option>
+      <option>深圳</option>
+    </select>
+        <br><br> 婚姻状况：
+        <!-- radio设置单选框，设置name属性才能达到一次只能选一个，不能同时选中  checked设置默认选中 -->
+        <input type="radio" name="marry" checked>未婚
+        <input type="radio" name="marry">已婚
+        <input type="radio" name="marry">保密
+        <br><br> 喜欢的类型：
+        <!-- checkbox多选 -->
+        <input type="checkbox" checked>可爱
+        <input type="checkbox" checked>性感
+        <input type="checkbox">御姐
+        <input type="checkbox">萝莉
+        <input type="checkbox">小鲜肉
+        <input type="checkbox">大叔
+        <br><br> 个人介绍：
+        <!-- textarea可以输入大段文字 -->
+
+        <br><br>
+        <textarea cols="60" rows="10"></textarea>
+
+        <h3>我承诺</h3>
+        <ul>
+            <li>年满18岁、单身</li>
+            <li>抱着严肃的态度</li>
+            <li>真诚寻找另一半</li>
+
+        </ul>
+        <!-- checkbox多选 -->
+        <input type="checkbox">我同意所有条款
+        <br><br>
+        <!-- submit提交按钮   value把提交改为注册按钮 -->
+        <input type="submit" value="注册">
+        <!-- reset重置按钮 -->
+        <input type="reset">
+    </form>
+</body>
+
+</html>
