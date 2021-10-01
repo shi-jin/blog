@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/news.css" />
+    <script src="./lib/jquery.js"></script>
+    <script src="./lib/template-web.js"></script>
+    <script src="./js/news.js"></script>
+</head>
+
+<body>
+
+    <div id="news-list"></div>
+
+    <!-- script定义模板  type="text/html"-->
+    <script type="text/html" id="tpl-news">
+        <!-- 标准语法 循环数组 -->
+        {{each data}}
+
+
+        <div class="news-item">
+            <img class="thumb" src="{{'http://www.liulongbin.top:3006' + $value.img}}" alt="" />
+            <div class="right-box">
+                <h1 class="title">{{$value.title}}</h1>
+                <div class="tags">
+                    <!-- 每循环一次创建一个span   $value当前新闻的信息-->
+                    {{each $value.tags}}
+                    <!-- 每一个字符串 -->
+                    <span>{{$value}}</span> {{/each}}
+                </div>
+                <div class="footer">
+                    <div>
+                        <!-- 当前新闻 -->
+                        <span>{{$value.source}}</span>&nbsp;&nbsp;
+                        <!-- 当前时间 -->
+                        <span>{{$value.time | dateFormat}}</span>
+                    </div>
+                    <span>评论数：{{$value.cmtcount}}</span>
+                </div>
+            </div>
+        </div>
+
+        {{/each}}
+    </script>
+
+</body>
+
+</html>
